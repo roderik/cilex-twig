@@ -1,0 +1,28 @@
+{
+    "name": "roderik/cilex-twig",
+    "description": "The Twig provider from Silex for Cilex",
+    "keywords": ["cilex", "twig", "provider"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fabien Potencier",
+            "email": "fabien@symfony.com"
+        },
+        {
+            "name": "Igor Wiedler",
+            "email": "igor@wiedler.ch"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "twig/twig": ">=1.8.0,<2.0-dev"
+    },
+    "autoload": {
+        "psr-0": { "Silex": "src/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
