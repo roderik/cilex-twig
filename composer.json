@@ -18,11 +18,6 @@
         "twig/twig": ">=1.8.0,<2.0-dev"
     },
     "autoload": {
-        "psr-0": { "Silex": "src/" }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
+        "psr-0": { "Cilex": "src/" }
     }
 }
