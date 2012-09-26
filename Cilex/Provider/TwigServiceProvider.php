@@ -31,9 +31,9 @@ class TwigServiceProvider implements ServiceProviderInterface
         $app['twig'] = $app->share(function ($app) {
             $app['twig.options'] = array_replace(
                 array(
-                    'charset'          => $app['charset'],
-                    'debug'            => $app['debug'],
-                    'strict_variables' => $app['debug'],
+                    'charset'          => "UTF-8",
+                    'debug'            => false,
+                    'strict_variables' => false,
                 ), $app['twig.options']
             );
 
