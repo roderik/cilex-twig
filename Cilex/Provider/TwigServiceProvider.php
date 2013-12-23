@@ -56,10 +56,15 @@ class TwigServiceProvider implements ServiceProviderInterface
             return new \Twig_Loader_Array($app['twig.templates']);
         });
 
+        $app['twig.loader.string'] = $app->share(function ($app) {
+            return new \Twig_Loader_String();
+        });
+
         $app['twig.loader'] = $app->share(function ($app) {
             return new \Twig_Loader_Chain(array(
                 $app['twig.loader.filesystem'],
                 $app['twig.loader.array'],
+                $app['twig.loader.string'],
             ));
         });
     }
