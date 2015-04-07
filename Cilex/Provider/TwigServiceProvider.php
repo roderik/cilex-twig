@@ -32,8 +32,8 @@ class TwigServiceProvider implements ServiceProviderInterface
             $app['twig.options'] = array_replace(
                 array(
                     'charset'          => "UTF-8",
-                    'debug'            => (isset($app['config']['debug'])?$app['config']['debug']:false),
-                    'strict_variables' => (isset($app['config']['debug'])?$app['config']['debug']:false),
+                    'debug'            => (isset($app['debug']) ? $app['debug'] : false),
+                    'strict_variables' => (isset($app['debug']) ? $app['debug'] : false),
                 ), $app['twig.options']
             );
 
@@ -41,7 +41,7 @@ class TwigServiceProvider implements ServiceProviderInterface
             $twig->addGlobal('app', $app);
             $twig->addExtension(new TwigCoreExtension());
 
-            if (isset($app['config']['debug']) && $app['config']['debug']) {
+            if (isset($app['debug']) && $app['debug']) {
                 $twig->addExtension(new \Twig_Extension_Debug());
             }
 
